@@ -1,5 +1,5 @@
 struct AxisSum <: EinOperation{1}
-    inds
+    inds::NTuple{N,Symbol} where {N}
 end
 AxisSum(inds...) = AxisSum(inds)
 
