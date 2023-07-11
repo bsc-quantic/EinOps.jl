@@ -16,4 +16,4 @@ EinOpsChainRulesCoreExt = "ChainRulesCore"
 
 [compat]
 Permutations = "0.4"
-julia = "1.8"
+julia = "1.9"
