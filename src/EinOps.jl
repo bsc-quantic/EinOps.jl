@@ -18,8 +18,8 @@ macro ein_str() end
 include("Operations/Primitive/AxisSum.jl")
 include("Operations/Primitive/AxisPermutation.jl")
 include("Operations/Primitive/Diagonal.jl")
-include("Operations/Primitive/HadamardProduct.jl")
 include("Operations/Primitive/OuterProduct.jl")
+include("Operations/HadamardProduct.jl")
 include("Operations/TiledMatrixMultiplication.jl")
 
 export einop, einop!, @ein
