@@ -1,6 +1,6 @@
 """
     Diagonal
-    
+
 ```math
 C_{ik} = A_{iik} = \\sum_{j} A_{ijk} \\delta_{ij} 
 ```

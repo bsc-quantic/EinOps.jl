@@ -13,8 +13,7 @@ AxisPermutation(perm...) = AxisPermutation(perm)
 
 Base.ndims(op::AxisPermutation) = length(op.permutator)
 
-Base.:∘(a::AxisPermutation, b::AxisPermutation) =
-    AxisPermutation(b.permutator[a.permutator])
+Base.:∘(a::AxisPermutation, b::AxisPermutation) = AxisPermutation(b.permutator[a.permutator])
 
 einop(op::AxisPermutation, a) = permutedims(a, op.permutator)
 einop!(op::AxisPermutation, c, a) = permutedims!(c, a, op.permutator)

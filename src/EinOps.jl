@@ -23,8 +23,6 @@ include("Operations/HadamardProduct.jl")
 include("Operations/TiledMatrixMultiplication.jl")
 
 export einop, einop!, @ein
-export AxisSum,
-    AxisPermutation, Diagonal, HadamardProduct, OuterProduct, TiledMatrixMultiplication
-
+export AxisSum, AxisPermutation, Diagonal, HadamardProduct, OuterProduct, TiledMatrixMultiplication
 
 end

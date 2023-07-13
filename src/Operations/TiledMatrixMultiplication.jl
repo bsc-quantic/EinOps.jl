@@ -16,8 +16,7 @@ function einop!(op::TiledMatrixMultiplication, c, a, b)
 
     i1, i2 =
         collect.(
-            first(op.left) == 1 ? (op.left, setdiff(1:ndims(a), op.left)) :
-            (setdiff(1:ndims(a), op.left), op.left)
+            first(op.left) == 1 ? (op.left, setdiff(1:ndims(a), op.left)) : (setdiff(1:ndims(a), op.left), op.left)
         )
     a_mat = reshape(a, prod.((collect(size(a))[i1], collect(size(a))[i2]))...)
 
@@ -37,7 +36,6 @@ function einop!(op::TiledMatrixMultiplication, c, a, b)
     end
 
     c_mat = reshape(c, size(a_mat, 1), size(b_mat, 2))
-
 
     mul!(c_mat, a_mat, b_mat)
     return c

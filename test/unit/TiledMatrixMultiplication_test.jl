@@ -32,5 +32,4 @@
     @test let c = zeros(2, 3, 6, 7)
         einop!(op, c, a, b)
     end == fill(20, 2, 3, 6, 7)
-
 end
