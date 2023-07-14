@@ -1,3 +1,5 @@
+using IterTools: distinct
+
 """
     Diagonal
 
